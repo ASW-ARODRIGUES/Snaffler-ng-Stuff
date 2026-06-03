@@ -1,0 +1,6 @@
+# In here add any custom words or phrases you want to make into wordlists (eg: the name of every DA in the domain)
+# New line per word/phrase
+
+Test
+Test 1
+P@$$w0RD

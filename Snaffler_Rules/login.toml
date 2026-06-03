@@ -1,0 +1,12 @@
+[[ClassifierRules]]
+EnumerationScope = "ContentsEnumeration"
+RuleName = "Password Keyword Match"
+Description = "Detect password keyword in file content"
+MatchAction = "Snaffle"
+MatchLocation = "FileContentAsString"
+WordListType = "Regex"
+WordList = [
+    "login",
+]
+CaseSensitive = false
+Triage = "Red"
