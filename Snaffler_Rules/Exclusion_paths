@@ -1,0 +1,17 @@
+[[ClassifierRules]]
+EnumerationScope = "DirectoryEnumeration"
+RuleName = "ExcludeTempDirectories"
+MatchAction = "Discard"
+Description = "Exclude temporary, cache, and similar directories"
+MatchLocation = "FilePath"
+WordListType = "Contains"
+WordList = [
+    "/tmp/",
+    "/temp/",
+    "/var/tmp/",
+    "/var/temp/",
+    "/var/cache/",
+    "\\tmp\\",
+    "\\temp\\",
+    "\\cache\\"
+]
