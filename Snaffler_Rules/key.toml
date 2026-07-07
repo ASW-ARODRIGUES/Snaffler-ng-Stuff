@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "Password Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "Secret Key Context"
+Description = "Key-related terms near secrets"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "key",
+    "(?i)\\b(api[_\\s-]?key|access[_\\s-]?key|secret[_\\s-]?key|private[_\\s-]?key|ssh[_\\s-]?key|token|client[_\\s-]?secret)\\b"
 ]
 CaseSensitive = false
 Triage = "Red"

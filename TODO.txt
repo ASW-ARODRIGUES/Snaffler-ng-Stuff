@@ -1,2 +1,0 @@
-Make the rule for IT and ID WAY stricter as there are too many false positives
-Also fix every issue showing up as password disclosure (???)

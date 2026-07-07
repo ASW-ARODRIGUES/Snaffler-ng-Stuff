@@ -1,6 +1,6 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "Password Keyword Match"
+RuleName = "CREATE LOGIN Keyword Match"
 Description = "Detect password keyword in file content"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"

@@ -1,12 +1,13 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "Password Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "Credential Fields"
+Description = "Detect username and password fields"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "id",
+    "(?i)(user(?:name)?|userid|user_id|login|account)\\s*[:=]",
+    "(?i)(password|passwd|pwd)\\s*[:=]"
 ]
 CaseSensitive = false
 Triage = "Red"

@@ -1,12 +1,13 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "Password Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "IT Credential Context"
+Description = "IT keyword near credential indicators"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "IT",
+    "(?i)\\bIT\\b.{0,80}\\b(password|passwd|pwd|secret|credential|login|username)\\b",
+    "(?i)\\b(password|passwd|pwd|secret|credential|login|username)\\b.{0,80}\\bIT\\b"
 ]
 CaseSensitive = false
 Triage = "Red"
