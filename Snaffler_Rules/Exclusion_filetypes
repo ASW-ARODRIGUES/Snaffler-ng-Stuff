@@ -36,6 +36,9 @@ WordList = [
     # Mobile packages
     ".apk",
 
+    # Documents
+    ".pdf",
+
     # Microsoft Word
     ".doc", ".docx", ".docm", ".dot", ".dotx", ".dotm",
 
