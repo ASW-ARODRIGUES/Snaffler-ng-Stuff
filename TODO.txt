@@ -1,1 +1,5 @@
 exclude JAR files
+exclude lib files
+exclude sym files
+exclude sfx files
+exclude pyd files
