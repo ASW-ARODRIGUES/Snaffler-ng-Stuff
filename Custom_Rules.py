@@ -5,7 +5,7 @@ import re
 # Always resolve paths relative to script location
 BASE_DIR = Path(__file__).resolve().parent
 INPUT_FILE = BASE_DIR / "Input.txt"
-OUTPUT_DIR = BASE_DIR / "output_rules"
+OUTPUT_DIR = BASE_DIR / "Snaffler_Rules"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 country_passwords = {
