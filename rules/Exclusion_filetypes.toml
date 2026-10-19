@@ -17,6 +17,7 @@ WordList = [
 
     # Executables / binaries
     ".exe", ".dll", ".msi", ".bin", ".iso", ".msu",
+    ".jar", ".lib", ".sym", ".sfx", ".pyd",
 
     # Archives / compression
     ".zip", ".rar", ".7z", ".tar", ".gz", ".tgz",
