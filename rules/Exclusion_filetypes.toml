@@ -20,7 +20,7 @@ WordList = [
     ".jar", ".lib", ".sym", ".sfx", ".pyd",
 
     # Archives / compression
-    ".zip", ".rar", ".7z", ".tar", ".gz", ".tgz",
+    ".zip", ".rar", ".7z", ".tar", ".gz", ".tgz",".cab",
 
     # Fonts
     ".ttf", ".otf", ".woff", ".woff2",
