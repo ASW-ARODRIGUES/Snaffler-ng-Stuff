@@ -17,13 +17,13 @@ WordList = [
 
     # Executables / binaries
     ".exe", ".dll", "mui", ".msi", ".bin", ".iso", ".msu",
-    ".jar", ".lib", ".sym", ".sfx", ".pyd",
+    ".jar", ".lib", ".sym", ".sfx", ".pyd", ".mid", ".tlb"
 
     # Archives / compression
     ".zip", ".rar", ".7z", ".tar", ".gz", ".tgz",".cab",
 
     # Fonts
-    ".ttf", ".otf", ".woff", ".woff2",
+    ".ttf", ".ttc", ".otf", ".woff", ".woff2",
 
     # CAD / 3D
     ".dwg", ".dxf", ".stl", ".obj",
