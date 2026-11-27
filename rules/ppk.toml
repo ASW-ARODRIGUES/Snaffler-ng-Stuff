@@ -1,12 +1,11 @@
 [[ClassifierRules]]
-EnumerationScope = "ContentsEnumeration"
-RuleName = "PPK Keyword Match"
-Description = "Detect password keyword in file content"
+EnumerationScope = "FileEnumeration"
+RuleName = "PPK File Match"
+Description = "Detect PuTTY private key files by extension, not the content substring 'ppk' (which matches constantly in binary noise)"
 MatchAction = "Snaffle"
-MatchLocation = "FileContentAsString"
-WordListType = "Regex"
+MatchLocation = "FileExtension"
+WordListType = "Exact"
 WordList = [
-    "ppk",
+    ".ppk",
 ]
-CaseSensitive = false
 Triage = "Red"

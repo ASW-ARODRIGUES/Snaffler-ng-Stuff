@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "U Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "U Flag Match"
+Description = "Detect a '-U <username>'-style flag (sqlcmd/psql/mysql connection strings), not just any '-U' substring"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "-U",
+    "(?:^|\\s)-U\\s+\\S+",
 ]
 CaseSensitive = false
 Triage = "Red"

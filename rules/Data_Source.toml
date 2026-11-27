@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
 RuleName = "Data Source Keyword Match"
-Description = "Detect password keyword in file content"
+Description = "Detect the actual ADO/ODBC 'Data Source=' connection-string key, not an unbounded '.*' that can span an entire file"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "Data.*Source=",
+    "Data\\s*Source\\s*=",
 ]
 CaseSensitive = false
 Triage = "Red"

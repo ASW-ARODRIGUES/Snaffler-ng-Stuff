@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "GHP Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "GHP Token Match"
+Description = "Detect an actual GitHub personal access token (ghp_ + 36 chars), not just the substring 'ghp'"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "ghp",
+    "ghp_[A-Za-z0-9]{36}",
 ]
 CaseSensitive = false
 Triage = "Red"

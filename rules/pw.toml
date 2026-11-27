@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "PW Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "PW Flag Match"
+Description = "Detect a '-pw <value>'-style flag, not just the bare '-pw' substring"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "-pw",
+    "(?:^|\\s)-pw\\s+\\S+",
 ]
 CaseSensitive = false
 Triage = "Red"

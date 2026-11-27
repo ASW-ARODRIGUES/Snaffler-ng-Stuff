@@ -1,12 +1,13 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "cred Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "Cred Field or Flag Match"
+Description = "Detect 'cred' as a field name or CLI flag ('cred:'/'cred='/'-cred'), not the bare substring (which matches 'credit', 'accredited', 'cred' inside unrelated identifiers)"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "cred",
+    "(?i)\\bcred\\b\\s*[:=]",
+    "(?:^|\\s)-cred\\b",
 ]
 CaseSensitive = false
 Triage = "Red"

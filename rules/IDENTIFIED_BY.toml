@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
 RuleName = "IDENTIFIED BY Keyword Match"
-Description = "Detect password keyword in file content"
+Description = "Detect the actual SQL 'IDENTIFIED BY' clause, not an unbounded '.*' that can span an entire file"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "IDENTIFIED.*BY",
+    "IDENTIFIED\\s+BY\\b",
 ]
 CaseSensitive = false
 Triage = "Red"

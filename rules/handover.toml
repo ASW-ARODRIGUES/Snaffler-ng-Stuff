@@ -1,12 +1,13 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "handover Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "Handover Credential Context"
+Description = "Detect 'handover' only near actual credential indicators, not any document that merely mentions handing something over"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "handover",
+    "(?i)\\bhandover\\b.{0,80}\\b(password|passwd|pwd|secret|credential|login|username)\\b",
+    "(?i)\\b(password|passwd|pwd|secret|credential|login|username)\\b.{0,80}\\bhandover\\b",
 ]
 CaseSensitive = false
-Triage = "Red"
+Triage = "Yellow"

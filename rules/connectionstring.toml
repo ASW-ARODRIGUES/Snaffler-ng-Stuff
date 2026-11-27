@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "connectionstring Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "Connection String Keyword Match"
+Description = "Detect 'connection string' / 'connectionstring' / 'connection_string', not just the no-space form"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "connectionstring",
+    "connection[_\\s]?string",
 ]
 CaseSensitive = false
 Triage = "Red"

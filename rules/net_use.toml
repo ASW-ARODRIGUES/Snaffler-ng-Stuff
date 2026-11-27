@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
 RuleName = "Net Use Keyword Match"
-Description = "Detect password keyword in file content"
+Description = "Detect the actual 'net use' command, not an unbounded '.*' that can span an entire file if 'net' and 'use' appear far apart"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "net.*use",
+    "net\\s+use\\b",
 ]
 CaseSensitive = false
 Triage = "Red"

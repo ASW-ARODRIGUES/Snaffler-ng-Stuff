@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "Login Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "Login Field Match"
+Description = "Detect 'login' used as a field name with a value, not the bare word (which matches login-page UI text, log filenames, generic prose)"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "login",
+    "(?i)\\blogin\\b\\s*[:=]\\s*\\S+",
 ]
 CaseSensitive = false
 Triage = "Red"

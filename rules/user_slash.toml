@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "User Slash Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "User Field Match"
+Description = "Detect '/user' as an actual field reference with a value, not any URL path segment or word containing 'user' (users, username, etc.)"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "/user",
+    "(?i)/user(?:name)?\\s*[:=]\\s*\\S+",
 ]
 CaseSensitive = false
-Triage = "Red"
+Triage = "Yellow"

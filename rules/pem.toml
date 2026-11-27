@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "PEM Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "PEM Header Match"
+Description = "Detect an actual PEM-encoded key/cert block, not just the substring 'pem' (matches 'system', 'modem', 'open', etc.)"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "pem",
+    "-----BEGIN [A-Z0-9 ]*(PRIVATE KEY|CERTIFICATE|PUBLIC KEY)-----",
 ]
 CaseSensitive = false
 Triage = "Red"

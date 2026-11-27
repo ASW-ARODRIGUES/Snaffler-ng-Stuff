@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "PWD Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "PWD Field Match"
+Description = "Detect 'pwd' used as a field name (pwd: / pwd=), not the bare substring (which matches 'pwdump' tool names, cwd references, etc. with no signal)"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "pwd",
+    "(?i)\\bpwd\\b\\s*[:=]",
 ]
 CaseSensitive = false
 Triage = "Red"

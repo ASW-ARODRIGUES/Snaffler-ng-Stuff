@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
-RuleName = "account Keyword Match"
-Description = "Detect password keyword in file content"
+RuleName = "Account Field Match"
+Description = "Detect 'account' used as a field name with a value, not the bare word (which matches 'accountant', 'accounting', login-page boilerplate, cookie banners, etc.)"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "account",
+    "(?i)\\baccount\\b\\s*[:=]\\s*\\S+",
 ]
 CaseSensitive = false
-Triage = "Red"
+Triage = "Yellow"

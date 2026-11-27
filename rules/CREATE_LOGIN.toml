@@ -1,12 +1,12 @@
 [[ClassifierRules]]
 EnumerationScope = "ContentsEnumeration"
 RuleName = "CREATE LOGIN Keyword Match"
-Description = "Detect password keyword in file content"
+Description = "Detect the actual SQL 'CREATE LOGIN' statement, not an unbounded '.*' that can span an entire file"
 MatchAction = "Snaffle"
 MatchLocation = "FileContentAsString"
 WordListType = "Regex"
 WordList = [
-    "CREATE.*LOGIN",
+    "CREATE\\s+LOGIN\\b",
 ]
 CaseSensitive = false
 Triage = "Red"
