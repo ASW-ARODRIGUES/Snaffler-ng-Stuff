@@ -16,7 +16,7 @@ WordList = [
     ".mp3", ".wav", ".flac", ".aac",
 
     # Executables / binaries
-    ".exe", ".dll", ".msi", ".bin", ".iso", ".msu",
+    ".exe", ".dll", "mui", ".msi", ".bin", ".iso", ".msu",
     ".jar", ".lib", ".sym", ".sfx", ".pyd",
 
     # Archives / compression
